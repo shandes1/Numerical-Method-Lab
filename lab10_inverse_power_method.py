@@ -1,9 +1,9 @@
-#to find dominant eigen value and correspomding eigen vector of square matrix by inverse power method
+#to find least eigen value and correspomding eigen vector of square matrix by inverse power method
 
 #import
 import scipy.linalg as slg
 import numpy as np
-import pandas as pd
+import pandas as pd 
 
 #input
 n= int(input("Enter the order of matrix:"))
@@ -43,7 +43,7 @@ while itr<=N:
     for i in range(n):
         X=Y/max_eigen_value
     
-    T.append([itr,max_eigen_value]+ [X[i] for i in range(n)])
+    T.append([itr,1/max_eigen_value]+ [X[i] for i in range(n)])
     error= abs(max_eigen_value-old_eigen_value)
     if error<e:
         break
