@@ -54,7 +54,7 @@ while itr<=N:
 if itr>N:
     print(f"No least eigen value is found in {N} iteration")
 else:
-    T= pd.DataFrame(T,columns=["iteration ","Max eigenvalue"]+ [f'X{i+1}' for i in range(n)]).to_string(index=False)
+    T= pd.DataFrame(T,columns=["iteration ","least eigenvalue"]+ [f'X{i+1}' for i in range(n)]).to_string(index=False)
     print(T)
 
     print(f"The least eigen value is {1/max_eigen_value} in {itr} iteration")
